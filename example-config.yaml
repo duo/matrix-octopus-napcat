@@ -1,0 +1,25 @@
+napcat:
+  manager_port: 11111
+  path: /app/napcat/config
+  cmd: /opt/QQ/qq --no-sandbox
+  init_timeout: 15s
+  request_timeout: 30s
+
+octopus:
+  id: r2d2
+  addr: ws://10.10.10.10:20002
+  secret: hello
+  ping_interval: 30s
+
+# Logging config. See https://github.com/tulir/zeroconfig for details.
+logging:
+    min_level: debug
+    writers:
+        - type: stdout
+          format: pretty-colored
+        - type: file
+          format: json
+          filename: ./logs/matrix-octopus-napcat.log
+          max_size: 100
+          max_backups: 10
+          compress: false

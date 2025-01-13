@@ -1,0 +1,11 @@
+.idea
+
+*.yaml
+!example-config.yaml
+
+*.log
+*.bak
+
+vendor/
+
+/matrix-octopus-napcat
